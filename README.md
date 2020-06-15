@@ -27,13 +27,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+".forEach" acts very similar to a for loop and ".map" will return a new array and wont mess up the original array. ******************************
+
 2. Explain the difference between a callback and a higher order function.
+
+
 
 3. What is closure?
 
 4. Describe the four rules of the 'this' keyword.
 
 5. Why do we need super() in an extended class?
+
+it allows sub-classes to push new attributes to the parent class. ******************************
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
