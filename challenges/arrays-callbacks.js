@@ -21,7 +21,6 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-console.log(displayNames);
 zooAnimals.forEach(function(element){
   var temp = "Name: " + element.animal_name + ", " + "Scientific: " + element.scientific_name
   displayNames.push(temp)
@@ -37,11 +36,16 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-//const lowCaseAnimalNames
-//console.log(lowCaseAnimalNames);
+const lowCaseAnimalNames = [];
+zooAnimals.map(function(element) {
+  lowCaseAnimalNames.push(element.animal_name.toLowerCase())
+}) //  <----------  This closing bracket was going to be the death of me!!! ****************************
 
-const lowCaseAnimalNames = zooAnimals.map(element => element.animal_name.toLowerCase());
-Console.log(lowCaseAnimalNames);
+console.log(lowCaseAnimalNames)
+
+
+// const lowCaseAnimalNames = zooAnimals.map(element => element.animal_name.toLowerCase())
+// Console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
 

@@ -7,11 +7,12 @@
 */
 
 
-function CuboidMaker(scale) {
-  this.height = scale.height;
-  this.width = scale.width;
-  this.length = scale.length;
+function CuboidMaker(h, w, l) {
+  this.h = h;                           
+  this.w = w;
+  this.l = l;                         // I kept running into issues using length because I "almost forgot that ".length" was already a key word...  *****************************
 }
+
 
 
 /* == Step 2: Volume Method ==
@@ -21,7 +22,7 @@ function CuboidMaker(scale) {
 */
 
 CuboidMaker.prototype.volume = function () {
-  return (this.height * this.width * this.length);
+  return this.h * this.w * this.l;
 }
 
 
@@ -32,7 +33,7 @@ CuboidMaker.prototype.volume = function () {
 */
 
 CuboidMaker.prototype.surfaceArea = function() {
-  return(2*((this.width * length) + (this.length * height) + this.width * height));
+  return 2 * (this.w * this.l + this.l * this.h + this.w * this.h);
 }
 
 
@@ -41,12 +42,13 @@ CuboidMaker.prototype.surfaceArea = function() {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
+const cuboid = new CuboidMaker (5, 5, 4)
 
-const cuboid = new CuboidMaker ({
-  height: 5,
-  width: 5,
-  length: 4,
-})
+// const cuboid = new CuboidMaker ({
+//   height: 5,
+//   width: 5,
+//   length: 4,
+// })
 
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:

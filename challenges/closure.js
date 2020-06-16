@@ -17,10 +17,31 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-// Because it's a function within a function AKA Clousure. It is not "technically" not looking outside in the global scope. 
+// Because it's a function within a function AKA Clousure. It is not "technically" looking outside into the global scope. **********************
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
 
-function summation()
+
+const summation = (sum) => {
+  let list = 0;
+  while (sum > 0) {
+    list += sum--;
+  }
+  return list
+}
+console.log(summation(12))
+
+
+// function summation (sum) {
+//   var list = [];
+//   for (var i = sum[0]; i <= sum[1]; i++) {
+//     list.push(i);
+//   }
+//   var total = list.reduce(function(a, b) {
+//     return a+b;
+//   });
+//   return total;
+// }
+// summation([10, 5])
