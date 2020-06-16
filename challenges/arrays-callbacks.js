@@ -20,10 +20,10 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = [];
-zooAnimals.forEach(function(element){
-  var temp = "Name: " + element.animal_name + ", " + "Scientific: " + element.scientific_name
-  displayNames.push(temp)
+const displayNames = []; // Made an empty array 
+zooAnimals.forEach(function(element){     // Used .forEach method to iterrate over the arrays above 
+  var temp = "Name: " + element.animal_name + ", " + "Scientific: " + element.scientific_name   // "Name" is called to specifically target what i would like int include in my array, and along woth the rest. I didn't need to use backticks because the under score connected the abjects. 
+  displayNames.push(temp) /// I used ".push" to add what I just wrote above. 
 })
 console.log(displayNames);
 
@@ -38,7 +38,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 const lowCaseAnimalNames = [];
 zooAnimals.map(function(element) {
-  lowCaseAnimalNames.push(element.animal_name.toLowerCase())
+  lowCaseAnimalNames.push(element.animal_name.toLowerCase()) /// I was stuck on this forever because i keep forgetting about the closing ")" on the outside of the curly bracket
 }) //  <----------  This closing bracket was going to be the death of me!!! ****************************
 
 console.log(lowCaseAnimalNames)
@@ -55,7 +55,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 //const lowPopulationAnimals
 //console.log(lowPopulationAnimals);
 
-const lowPopulationAnimals = zooAnimals.filter(element => element.population < 5);
+const lowPopulationAnimals = zooAnimals.filter(element => element.population < 5); // created the arrow function to capture "population" and made it display anything "< 5"
 console.log(lowPopulationAnimals);
 
 
@@ -67,7 +67,7 @@ The zoos need to know their total animal population across the United States. Fi
 */
 //let populationTotal = 0;
 //console.log(populationTotal);
-const populationTotal = zooAnimals.reduce((accumulator, currentValue) => accumulator+currentValue.population, 0);
+const populationTotal = zooAnimals.reduce((accumulator, currentValue) => accumulator+currentValue.population, 0); // The reduce methode take both accumulator & currentValue ad arguments and I exicuted the code with the nifty arrow function 
 
 console.log(populationTotal);
 // ==== Callbacks ====  
@@ -79,6 +79,10 @@ console.log(populationTotal);
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
+const consume = (a,b,cb) => cb (a, b);
+const cbList = (a, b) => a/b;
+consume(4, 4, cbList);
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -86,11 +90,14 @@ console.log(populationTotal);
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+const add = (a, b) => a + b;
+const multiply = (a, b) => a * b;
+const greeting = (a, b) =>  `Hello ${a} ${b}, nice to meet you`
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 

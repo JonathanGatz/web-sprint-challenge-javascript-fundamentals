@@ -25,17 +25,28 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
-1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)                     
 
 ".forEach" acts very similar to a for loop and ".map" will return a new array and wont mess up the original array. ******************************
 
 2. Explain the difference between a callback and a higher order function.
 
-
+you can pass a callback function within another "function (in here)". A higher order function is just a another function that happens within it's perant function. ****************************
 
 3. What is closure?
 
+Closure gives you access to an outter (another) functions scope. It can use refferences from the lexical envirnment ******************************
+
+
+
 4. Describe the four rules of the 'this' keyword.
+
+1. Call = It refers to the first argument of the function                       ******************************
+2. new = .this refers to the object created by the older function               ******************************
+3. global scope = .this can be pulled from the global scope                     ******************************
+4. object function = .this refers to the Object itsef                           ******************************
+
+
 
 5. Why do we need super() in an extended class?
 
