@@ -31,7 +31,7 @@ const summation = (sum) => {  // Was trying two different ways... arrow function
   }
   return list
 }
-console.log(summation(12)) // I let sum be 12 
+console.log(summation(4)) // I let sum be 12 
 
 
 // function summation (sum) {

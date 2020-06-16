@@ -41,16 +41,16 @@ Closure gives you access to an outter (another) functions scope. It can use reff
 
 4. Describe the four rules of the 'this' keyword.
 
-1. Call = It refers to the first argument of the function                       ******************************
+1. Call = It refers to the first argument of the function - Explicit                    ******************************
 2. new = .this refers to the object created by the older function               ******************************
 3. global scope = .this can be pulled from the global scope                     ******************************
-4. object function = .this refers to the Object itsef                           ******************************
+4. object function = .this refers to the Object itsef  -  Implicit                      ******************************
 
 
 
 5. Why do we need super() in an extended class?
 
-it allows sub-classes to push new attributes to the parent class. ******************************
+it allows sub-classes to push new attributes from the parant class to the child class. ******************************
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 

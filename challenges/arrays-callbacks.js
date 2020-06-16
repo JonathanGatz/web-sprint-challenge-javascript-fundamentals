@@ -79,7 +79,7 @@ console.log(populationTotal);
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
-const consume = (a,b,cb) => cb (a, b);
+const consume = (a,b,cb) => cb (a, b); // This was pretty easy just following step by step 
 const cbList = (a, b) => a/b;
 consume(4, 4, cbList);
 
@@ -92,7 +92,7 @@ consume(4, 4, cbList);
 
 const add = (a, b) => a + b;
 const multiply = (a, b) => a * b;
-const greeting = (a, b) =>  `Hello ${a} ${b}, nice to meet you`
+const greeting = (a, b) =>  `Hello ${a} ${b}, nice to meet you` // I absolutely love these backticks 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 console.log(consume(2, 2, add)); // 4
