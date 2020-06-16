@@ -21,7 +21,7 @@ function CuboidMaker(h, w, l) {
   Formula for cuboid volume: length * width * height
 */
 
-CuboidMaker.prototype.volume = function () {
+CuboidMaker.prototype.volume = function () {  //// I used "prototype" to add inhertance from cubiodMaker & "volume"
   return this.h * this.w * this.l;
 }
 
@@ -32,8 +32,8 @@ CuboidMaker.prototype.volume = function () {
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
 
-CuboidMaker.prototype.surfaceArea = function() {
-  return 2 * (this.w * this.l + this.l * this.h + this.w * this.h);
+CuboidMaker.prototype.surfaceArea = function() {  /// I used the exact same formate as above. This is what I loved about the last challenge
+  return 2 * (this.w * this.l + this.l * this.h + this.w * this.h); // Used the above formula 
 }
 
 
